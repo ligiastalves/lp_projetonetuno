@@ -1,0 +1,45 @@
+
+/* Estilos para dispositivos menores */
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column; /* Menu em coluna */
+  }
+
+  .form-section {
+      flex-direction: column;
+  }
+
+  .form-container {
+      padding-left: 0;
+  }
+
+  .project-content {
+      flex-direction: column;
+  }
+
+  .objectives-container {
+      flex-direction: column;
+  }
+
+  .footer-column {
+      text-align: left;
+  }
+}
+
+/* Estilos para dispositivos médios */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .project-content {
+      flex-direction: row;
+  }
+
+  .objectives-container {
+      justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* Estilos para telas maiores */
+  .checkbox-group label {
+      width: auto; /* Ajusta o layout para um formato mais compacto em telas maiores */
+  }
+}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/resposive.css">
+    <title>Desafio HTML Netuno</title>
+</head>
+<body>
+    <!-- Menu e linha gradiente -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../imgs/logo_header.png" alt="Logo da Empresa">
+            </div>
+            <ul>
+                <li><a href="#projeto">O Projeto</a></li>
+                <li><a href="#problema">O Problema</a></li>
+                <li><a href="#jornada">Sua Jornada</a></li>
+                <li><a href="#objetivos">Objetivos</a></li>
+                <li><a href="#processo-seletivo" class="button">Processo Seletivo</a></li>
+            </ul>
+        </nav>
+        <div class="gradiente-linha"></div>
+    </header>
+
+    <!-- Seção com imagem e formulário -->
+    <section class="form-section">
+        <div class="image-container_form">
+            <img src="../imgs/estudantes_img.png" alt="jovens-estudante">
+        </div>
+        <div class="form-container">
+            <div class="form-box">
+                <h3 class="form-title">Formulário de Cadastro</h3>
+                <p class="form-subtitle">Preencha seus dados</p>
+
+                <div class="input-group">
+                    <img src="../imgs/icon_user.png" class="icon" alt="Ícone Pessoa">
+                    <input type="text" placeholder="Nome Completo*" class="input-text">
+                </div>
+
+                <div class="input-group">
+                    <img src="../imgs/icon_email.png" class="icon" alt="Ícone Email">
+                    <input type="email" placeholder="E-mail*" class="input-text">
+                </div>
+
+                <div class="input-group">
+                    <img src="../imgs/icon_casa.png" class="icon" alt="Ícone Casa">
+                    <select id="state" name="state" class="input-text">
+                        <option value="" disabled selected>Estado*</option>
+                        <option value="sp">São Paulo</option>
+                        <option value="rj">Rio de Janeiro</option>
+                        <option value="mg">Minas Gerais</option>
+                    </select>
+                </div>
+                
+                <div class="proficiency-box">
+                    <p class="proficiency-title">Nível de Proficiência*</p>
+                    <label><input type="radio" name="proficiency" value="basico"> Básico</label>
+                    <label><input type="radio" name="proficiency" value="medio"> Médio</label>
+                    <label><input type="radio" name="proficiency" value="avancado"> Avançado</label>
+                </div>
+
+                <div class="skills-box">
+                    <p class="skills-title">Conhecimentos de Programação*</p>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="skills" value="html"> HTML</label>
+                        <label><input type="checkbox" name="skills" value="css"> CSS</label>
+                        <label><input type="checkbox" name="skills" value="javascript"> Javascript</label>
+						<label><input type="checkbox" name="skills" value="php"> PHP</label>
+                        <label><input type="checkbox" name="skills" value="net"> .NET</label>
+						<label><input type="checkbox" name="skills" value="vue"> Vue.JS</label>
+                    </div>
+
+					<div class="checkbox-group">
+						<label><input type="checkbox" name="skills" value="react"> ReactJS</label>
+                        <label><input type="checkbox" name="skills" value="reactnat"> React Native</label>
+                        <label><input type="checkbox" name="skills" value="node"> Node</label>
+						<label><input type="checkbox" name="skills" value="python"> Python</label>
+                        <label><input type="checkbox" name="skills" value="flutter"> Flutter</label>
+                        <label><input type="checkbox" name="skills" value="outras"> Outras</label>
+                    </div>                  
+                
+
+                <div class="experience-box">
+                    <p>Já trabalhou com desenvolvimento?</p>
+                    <label><input type="checkbox" name="experience" value="sim"> Sim</label>
+                    <label><input type="checkbox" name="experience" value="nao"> Não</label>
+                </div>
+
+                <hr class="form-divider">
+
+                <p class="required-fields">[*] Campos obrigatórios</p>
+                <div class="center-button">
+                    <button type="submit" class="submit-button">Enviar</button>
+                </div>
+                
+
+                <p class="privacy-policy">Ao clicar em enviar, você concorda com todos os termos de uso de dados descritos em política de privacidade.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Seções -->
+    <!-- Seção Projeto-->
+    <section id="projeto" class="project-section">
+        <div class="project-content">
+            <div class="image-container_proj">
+                <img src="../imgs/janelas_img.png" alt="janelas de codigos">
+            </div>
+            <div class="project-text">
+                <h2>O Projeto</h2>
+                <p>Com o "novo normal" causado pela pandemia dos últimos anos, mais empresas no mundo todo têm aberto oportunidades no modelo Home Office.
+                    Alinhado a depreciação da moeda local, temos um alto índice de profissionais migrando para trabalhos em outros países.
+                </p>
+                <p>O projeto Netuno, idealizado pela Fasters, tem por objetivo reduzir os estresses causados por recrutamento e turn over na área de tecnologia, bem como gerar oportunidades de carreira para novos profissionais.
+                </p>
+            </div>
+        </div>
+    </section>
+   <!-- Seção Problema -->
+<section id="problema" class="problem-section">
+    <div class="problem-content">
+        <div class="image-container_proj">
+            <img src="../imgs/senhora_img.png" alt="senhora">
+        </div>
+        <div class="problem-text">
+            <h2>O Problema</h2>
+            <p>Falta de profissionais de TI no mercado brasileiro: um problema que demanda atenção urgente.</p>
+            <p>Estima-se que atualmente tenhamos um déficit de 408 mil postos de trabalho, com perdas se acumulando na casa dos R$ 167 bilhões, de acordo com a Softex, uma organização social voltada ao fomento da área de TI.</p>
+            <p>Um dos principais fatores dessa falta de profissionais é o êxodo de profissionais para o exterior.</p>
+        </div>
+    </div>
+    <div class="problems-container">
+        <div class="problem-box">
+            <h3>Oportunidade</h3>
+            <p>Acreditamos que a combinação de interesse, dedicação e oportunidade pode causar um grande impacto nas pessoas, nas organizações e no mundo.</p>
+        </div>
+        <div class="problem-box">
+            <h3>Comunidade</h3>
+            <p>Dentro de um grupo de pessoas mais experientes e acessíveis, a curva de aprendizado ocorre de forma mais rápida, fluída e eficiente.</p>
+        </div>
+        <div class="problem-box">
+            <h3>Experiência Real</h3>
+            <p>Entendemos que somente as experiências reais poderão trazer a bagagem que a teoria não pode proporcionar.</p>
+        </div>
+    </div>
+</section>
+    <!-- Seção Jornada -->
+    <section id="jornada" class="journey-section">
+        <h2 class="titulo-jornada">Sua Jornada</h2>
+        <div class="journey-container">
+            <div class="journey-box">
+                <div class="icon-container">
+                    <img src="../imgs/icon1_jornada.png" alt="Ícone 1">
+                </div>    
+                <p>Programas de 4 meses de duração, sendo 6 horas/dia.</p>
+            </div>            
+            <div class="journey-box">
+                <div class="icon-container">
+                    <img src="../imgs/icon2_jornada.png" alt="Ícone 2">
+                </div> 
+                <p>Do Zero ao Junior Promissor em 4 meses.</p>
+            </div>
+            <div class="journey-box">
+                <div class="icon-container">
+                    <img src="../imgs/icon3_jornada.png" alt="Ícone 3">
+                </div> 
+                    <p>640 horas de aplicação prática dos conceitos.</p>
+            </div>
+        </div>
+        <div class="journey-container">    
+            <div class="journey-box">
+                <div class="icon-container">
+                    <img src="../imgs/icon4_jornada.png" alt="Ícone 4">
+                </div> 
+                    <p>Mentoria Individual e coletiva em padrão ágil.</p>              
+            </div>
+            <div class="journey-box">
+                <div class="icon-container">
+                    <img src="../imgs/icon5_jornada.png" alt="Ícone 5">
+                </div> 
+                <p>100% Home Office com plataforma de cursos online.</p>              
+            </div>
+            <div class="journey-box">
+                <div class="icon-container">
+                    <img src="../imgs/icon6_jornada.png" alt="Ícone 6">
+                </div> 
+                <p>Variedade de áreas dentro da tecnologia.</p>          
+            </div>
+        </div>
+        <div class="button-journey">
+            <button class="botao-processo">
+                <span>Quero me cadastrar para o </span>
+                <span class="texto-azul">Processo Seletivo</span>
+                <img src="../imgs/seta_icon_processo.png" alt="icone Seta" class="seta-icone" >
+            </button>
+        </div>
+        <img src="../imgs/pincel_img.png" alt="Imagem pincel" class="imagem-pincel">
+    </section>
+
+    <!-- Seção Objetivos -->
+    <section id="objetivos" class="objectives-section">
+        <h2>Objetivos</h2>
+        <div class="objectives-container">
+            <div class="objective-box">
+                <h3>Otimizar</h3>
+                <p>Otimizar todo processo de contratação chegando a contribuir com uma economia de 40% no processo de recrutamento.</p>
+            </div>
+            <div class="objective-box">
+                <h3>Gerar</h3>
+                <p>Gerar novas oportunidades de carreira para pessoas interessadas em ingressar na area ou migrar de outras areas que esteja descontente.</p>
+            </div>
+            <div class="objective-box">
+                <h3>Filtrar</h3>
+                <p>Criar oportunidades brilhantes para profissionais que se destacarem junto a parceiros estratégicos de negócios.</p>
+            </div>
+        </div>
+    </section>
+
+	<!-- Rodapé -->
+<footer>
+    <div class="footer-container">
+        <!-- 1ª Coluna: Logo e Redes Sociais -->
+        <div class="footer-column">
+            <div class="footer-logo">
+                <img src="../imgs/logo_footer.png" alt="Logo da Empresa">
+            </div>
+            <div class="footer-social-media">
+                <a href="https://www.facebook.com/seu-perfil" target="_blank">
+                    <img src="../imgs/icon_faceb.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/seu-perfil" target="_blank">
+                    <img src="../imgs/icon_instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/in/seu-perfil" target="_blank">
+                    <img src="../imgs/icon_linkedin.png" alt="LinkedIn">
+                </a>
+				<p>Netuno©  2022 - Todos os direitos reservados</p>
+            </div>
+        </div>
+
+        <!-- 2ª Coluna: Botão Processo Seletivo -->
+        <div class="footer-column">
+            <a href="#processo-seletivo" class="footer-button">Processo Seletivo</a>
+        </div>
+
+        <!-- 3ª Coluna: Links do Menu -->
+        <div class="footer-column">
+            <ul>
+                <li><a href="#projeto">O Projeto</a></li>
+                <li><a href="#problema">O Problema</a></li>
+                <li><a href="#jornada">Sua Jornada</a></li>
+                <li><a href="#objetivos">Objetivos</a></li>
+            </ul>
+        </div>
+
+        <!-- 4ª Coluna: Contato -->
+        <div class="footer-column">
+            <p>(11) 91234-5678</p>
+            <p>contato@netuno.com.br</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
