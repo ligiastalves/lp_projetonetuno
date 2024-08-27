@@ -80,18 +80,23 @@ nav ul li a.button:hover {
 .form-section {
     display: flex;
     padding: 40px 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Ajusta o espaçamento entre os elementos */
 }
 
 .image-container_form {
-    width: 100%; 
-    margin-bottom: 20px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .image-container_form img {
-    width: 70%; 
+    width: 100%; 
     height: auto;
     display: block;
-  }
+}
 
 .image-vertical{
     margin: 40px;
@@ -99,8 +104,9 @@ nav ul li a.button:hover {
 
 }
 .form-container {
-    width: 70%; 
-    padding-left: 0px;
+    width: 50%;
+    padding-left: 40px; /* Aumenta a distância da lateral esquerda */
+    box-sizing: border-box; /* Inclui o padding no cálculo da largura */
 }
 
 .form-box {
@@ -199,15 +205,17 @@ input[type=text], select {
 
 .checkbox-group {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    justify-content: space-between; /* Espaço entre os itens */
     margin-bottom: 15px;
+    width: 100%; /* Garante que o grupo de checkboxes ocupe a largura completa */
 }
   
 .checkbox-group label {
-    width: 100%; /* Cada label ocupará a largura total disponível */
-    margin-bottom: 10px;
+    width: 48%; /* Garante que cada checkbox ocupe metade da largura do grupo */
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .experience-box {
@@ -500,10 +508,18 @@ input[type=text], select {
     gap: 20px;
 }
 
+.objectives-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 .problem-box,
 .objective-box {
-    width: 100%;
-    height: auto;
+    flex: 1;
+    min-width: 300px;
+    padding: 50px;
+    text-align: center;
 }
 
 /* Efeito de hover */
