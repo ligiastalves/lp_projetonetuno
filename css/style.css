@@ -1,5 +1,6 @@
 :root{
     --azul: #1A7FBD;
+    --azulpj: #1B7FBD;
     --preto: #000000;
     --branco: #FFFFFF;
 }
@@ -28,7 +29,7 @@ nav {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0 20px; /* Ajusta os espaçamentos */
+    padding: 0 20px;
 }
 
 nav .logo img {
@@ -87,14 +88,19 @@ nav ul li a.button:hover {
 }
 
 .image-container_form img {
-    width: 100%; 
+    width: 70%; 
     height: auto;
     display: block;
   }
 
-  .form-container {
-    width: 100%; 
-    padding-left: 0;
+.image-vertical{
+    margin: 40px;
+    padding-top: 120px;
+
+}
+.form-container {
+    width: 70%; 
+    padding-left: 0px;
 }
 
 .form-box {
@@ -286,32 +292,28 @@ input[type=text], select {
     height: auto;
     border-radius: 8px;
 }
+/* Estilo para a seção "O Projeto" */
+#projeto {
+    background-color: var(--azulpj);
+    color: var(--branco); 
+    padding: 40px; 
+    text-align: left;
+}
 
 .project-text {
     flex: 2;
     color: var(--branco);
 }
 
+/* Estilo para o título (h2) da seção "O Projeto" */
 .project-text h2 {
-    color: var(--azul);
+    color: var(--branco);
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .project-text p {
     margin-bottom: 15px;
-}
-
-#projeto {
-    background-color: var(--preto);
-    color: var(--azul); 
-    padding: 40px; 
-    text-align: left;
-}
-
-/* Estilo para o título (h2) da seção "O Projeto" */
-.project-text h2 {
-    color: var(--azul);
-    text-align: left;
 }
 
 /* Estilo para o 1º parágrafo */
@@ -417,7 +419,8 @@ input[type=text], select {
 .imagem-pincel {
     display: block;
     margin: 2rem auto 0;
-    width: 140px; 
+    padding-bottom: 20px;
+    width: 200px; 
 }
 
 /* Estilo geral para as seções Problema e Objetivos */
