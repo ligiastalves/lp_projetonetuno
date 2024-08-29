@@ -302,7 +302,7 @@ input[type=text], select {
 }
 /* Estilo para a seção "O Projeto" */
 #projeto {
-    background-color: var(--azulpj);
+    background-color: var(--azul);
     color: var(--branco); 
     padding: 40px; 
     text-align: left;
@@ -314,9 +314,10 @@ input[type=text], select {
 }
 
 /* Estilo para o título (h2) da seção "O Projeto" */
-.project-text h2 {
-    color: var(--branco);
+.titulo-project {
+    color: #b8ddf5;
     margin-bottom: 20px;
+    font-size: 2.5rem;
     text-align: left;
 }
 
@@ -337,6 +338,140 @@ input[type=text], select {
     text-align: left;
 }
 
+.image-container_proj {
+    flex: 1;
+    max-width: 30%;
+    text-align: left; 
+    margin-left: 20px;
+}
+
+.image-container_proj img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Estilo específico para a seção Problema */
+#problema {
+    background-color: var(--branco);
+    padding: 40px; 
+    text-align: left;
+}
+
+.problem-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.problem-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* Reduz o espaçamento entre imagem e texto */
+    padding: 20px; 
+}
+
+.image-container_prob {
+    flex: 1;
+    max-width: 30%; /* Ajusta a largura da imagem */
+    text-align: left; 
+    margin-left: 20px;
+}
+
+.image-container_prob img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.problem-text {
+    flex: 2;
+    max-width: 55%; 
+    text-align: left; 
+    color: var(--preto); 
+    margin-right: 20px; /* Afasta o texto da borda direita */
+}
+
+.problems-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.problem-box {
+    background-color: var(--branco);
+    flex: 1;
+    min-width: 300px;
+    max-width: 300px;
+    padding: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease-in-out;
+}
+
+.problem-box:hover {
+    transform: translateY(-5px);
+}
+
+.problem-box h3 {
+    color: var(--preto);
+    margin-bottom: 15px;
+}
+
+/* Estilo para o titulo "Os Problemas" */
+.titulo-problem {
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #b8ddf5, var(--azul));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Estilo para os parágrafos */
+.problem-text p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px; 
+    line-height: 1.5; 
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Estilo para o 1º parágrafo */
+.problem-text p:first-of-type {
+    color: var(--preto);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Linha separadora */
+.linha-separadora {
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+/* Estilo para o 2º parágrafo */
+.problem-text p:nth-of-type(2) {
+    color: var(--preto);
+    font-size: 16px;
+}
+
+/* Estilo para o 3º parágrafo */
+.problem-text p:nth-of-type(3) {
+    color: var(--preto);
+    font-weight: bold;
+    font-size: 16px;
+}
+
 /* Estilo para seção Jornada */
 #jornada {
     background-color: var(--branco);
@@ -346,7 +481,7 @@ input[type=text], select {
 
 .titulo-jornada {
     font-size: 2.5rem;
-    background: linear-gradient(to right, var(--azul), #87CEFA);
+    background: linear-gradient(to right, var(--azul), #b8ddf5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 2rem;
@@ -431,115 +566,86 @@ input[type=text], select {
     width: 200px; 
 }
 
-/* Estilo geral para as seções Problema e Objetivos */
-#problema{
-    background-color: var(--branco);
-    color: var(--preto); 
-    padding: 40px;
-}
-
+/* Estilo específico para a seção Objetivos */
 #objetivos {
     background-color: var(--azul);
     color: var(--preto); 
-    padding: 40px; 
+    padding: 40px 20px;
+    position: relative;
 }
 
-/* Estrutura e alinhamento das seções */
-.problem-section,
 .objectives-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 40px;
+    padding: 40px 20px;
 }
 
-/* Conteúdo principal das seções */
-.problem-content,
 .objectives-container {
     display: flex;
-    justify-content: center;
-    gap: 40px;
+    justify-content: space-between;
+    gap: 20px;
     flex-wrap: wrap;
     max-width: 1000px;
     width: 100%;
 }
-/* Imagem na seção Problema */
-.image-container_proj {
-    flex: 1;
-    max-width: 400px;
-}
 
-.image-container_proj img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-}
-
-.problem-text {
-    flex: 2;
-    max-width:700px;
-}
-
-.problem-section h2{
-    color:var(--azul);
-    margin-bottom: 30px;
-}
-
-/* Caixas de Problema e Objetivos */
-.problem-box,
 .objective-box {
     background-color: var(--branco);
     flex: 1;
     min-width: 300px;
     max-width: 400px;
     padding: 50px;
+    margin: 10px; 
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.2s ease-in-out;
 }
 
-/* Ajuste para garantir que as caixas tenham a mesma altura */
-.problems-container,
-.objectives-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.objectives-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.problem-box,
-.objective-box {
-    flex: 1;
-    min-width: 300px;
-    padding: 50px;
-    text-align: center;
-}
-
-/* Efeito de hover */
-.problem-box:hover,
 .objective-box:hover {
     transform: translateY(-5px);
 }
 
-/* Estilo para o título (h2) das seções */
-
 .objectives-section h2 {
     color: var(--branco);
+    font-size: 2.5rem;
     margin-bottom: 30px;
 }
 
-/* Estilo para os subtítulos (h3) dentro das caixas */
-.problem-box h3,
 .objective-box h3 {
     color: var(--preto);
     margin-bottom: 15px;
+}
+
+/* Estilo para as imagens laterais na seção Objetivos */
+.objectives-images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.image-left img,
+.image-right img {
+    max-width: 900px;
+    height: auto;
+    display: block;
+}
+
+.image-left {
+    position: absolute;
+    left: -170px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.image-right {
+    position: absolute;
+    right: -170px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* Estilos do Rodapé */
