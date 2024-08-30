@@ -39,6 +39,11 @@ body {
     overflow-x: hidden;
 }
 
+body a {
+    text-decoration: none;
+    color: inherit; 
+}
+
 /* Estilo do menu */
 header {
     background-color: var(--azul);
@@ -431,7 +436,7 @@ input[type=text], select {
     max-width: 55%; 
     text-align: left; 
     color: var(--preto); 
-    margin-right: 20px; /* Afasta o texto da borda direita */
+    margin-right: 20px; 
 }
 
 .problems-container {
@@ -456,6 +461,7 @@ input[type=text], select {
     transition: transform 0.2s ease-in-out;
 }
 
+/*Achei que seria legal :) */
 .problem-box:hover {
     transform: translateY(-5px);
 }
@@ -576,6 +582,7 @@ input[type=text], select {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    
 }
 
 .button-journey {
