@@ -1,45 +1,74 @@
-
 /* Estilos para dispositivos menores */
 @media (max-width: 768px) {
-  nav ul {
-      flex-direction: column; /* Menu em coluna */
-  }
+    nav ul {
+        flex-direction: column; /* Menu em coluna */
+    }
 
-  .form-section {
-      flex-direction: column;
-  }
+    .form-section,
+    .project-section,
+    .problem-section,
+    .objectives-section {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .form-container {
-      padding-left: 0;
-  }
+    .form-container,
+    .image-container_form,
+    .project-content,
+    .problem-content,
+    .objectives-container {
+        width: 100%;
+        padding-left: 0;
+    }
 
-  .project-content {
-      flex-direction: column;
-  }
+    .problem-box,
+    .objective-box {
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+    }
 
-  .objectives-container {
-      flex-direction: column;
-  }
+    .project-text,
+    .problem-text {
+        text-align: center;
+        margin-left: 0;
+    }
 
-  .footer-column {
-      text-align: left;
-  }
+    .footer-column {
+        text-align: left;
+    }
+
+    /* Ajuste para a caixa de seleção em telas menores */
+    .checkbox-group label {
+        width: 100%; /* Aumenta a largura em telas menores */
+    }
 }
 
 /* Estilos para dispositivos médios */
 @media (min-width: 769px) and (max-width: 1024px) {
-  .project-content {
-      flex-direction: row;
-  }
+    .project-content,
+    .problem-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
-  .objectives-container {
-      justify-content: space-around;
-  }
+    .objectives-container {
+        justify-content: space-around;
+    }
 }
 
-@media screen and (min-width: 768px) {
-  /* Estilos para telas maiores */
-  .checkbox-group label {
-      width: auto; /* Ajusta o layout para um formato mais compacto em telas maiores */
-  }
+/* Estilos para telas maiores */
+@media screen and (min-width: 1025px) {
+    .checkbox-group label {
+        width: auto; /* Ajusta o layout para um formato mais compacto em telas maiores */
+    }
+
+    .project-content,
+    .problem-content {
+        justify-content: space-between;
+    }
+
+    .objectives-container {
+        justify-content: space-between;
+    }
 }

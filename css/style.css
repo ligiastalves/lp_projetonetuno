@@ -1,8 +1,10 @@
 :root{
-    --azul: #1A7FBD;
-    --azulpj: #1B7FBD;
+    --azul: #145da0;
+    --azulpj: #1A7FBD;
+    --azulc: #6CBFF2;
     --preto: #000000;
     --branco: #FFFFFF;
+    --brancopb: #F9F9F9;
 }
 
 * {
@@ -11,9 +13,25 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('fonts/HKGrotesk-Regular.woff2') format('woff2'),
+         url('fonts/HKGrotesk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('fonts/HKGrotesk-Bold.woff2') format('woff2'),
+         url('fonts/HKGrotesk-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
 /* Estilos do corpo */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'HK Grotesk', 'Arial', sans-serif;
     line-height: 1.6;
     background-color: var(--azul);
 }
@@ -82,7 +100,7 @@ nav ul li a.button:hover {
     padding: 40px 20px;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 20px; /* Ajusta o espaçamento entre os elementos */
+    gap: 20px;
 }
 
 .image-container_form {
@@ -105,15 +123,15 @@ nav ul li a.button:hover {
 }
 .form-container {
     width: 50%;
-    padding-left: 40px; /* Aumenta a distância da lateral esquerda */
-    box-sizing: border-box; /* Inclui o padding no cálculo da largura */
+    padding-left: 40px;
+    box-sizing: border-box;
 }
 
 .form-box {
     background-color: var(--branco);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--preto);
     border-top-left-radius: 8px;
     border-bottom-right-radius: 8px;
     border-image-source: linear-gradient(to right, var(--azul), var(--azul));
@@ -129,7 +147,7 @@ input[type=text], select {
     border-radius: 4px;
     box-sizing: border-box;
     color: #A0A0A0;
-    font-size: 16px; /* Tamanho da fonte consistente */
+    font-size: 16px;
 }
 
 .form-title {
@@ -139,7 +157,7 @@ input[type=text], select {
 }
 
 .form-subtitle {
-    color: #1A7FBD;
+    color: var(--azul);
     font-size: 16px;
     margin-bottom: 20px;
 }
@@ -154,8 +172,8 @@ input[type=text], select {
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    width: 25px; /* Tamanho do ícone */
-    height: 25px; /* Tamanho do ícone */
+    width: 25px; 
+    height: 25px; 
 }
 
 .input-group input, 
@@ -167,7 +185,7 @@ input[type=text], select {
     color: #A0A0A0;
     font-size: 16px; 
     box-sizing: border-box;    
-    background-color: white;
+    background-color: var(--branco);
 }
 
 .input-group input::placeholder {
@@ -175,9 +193,8 @@ input[type=text], select {
 }
 
 .proficiency-box {
-    background-color:#1A7FBD;
+    background-color:var(--azul);
     padding: 15px;
-    /*border-radius: 4px;*/
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: -20px;
@@ -194,25 +211,27 @@ input[type=text], select {
     margin-right: 15px;
 }
 
-.skills-box {
+.skills-container {
+    border: 1px solid gray; 
+    border-radius: 8px; 
+    padding: 10px; 
     margin-bottom: 15px;
 }
 
 .skills-title {
-    color: #1A7FBD;
+    color: var(--azul);
     margin-bottom: 15px;
 }
 
 .checkbox-group {
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem linha */
-    justify-content: space-between; /* Espaço entre os itens */
-    margin-bottom: 15px;
-    width: 100%; /* Garante que o grupo de checkboxes ocupe a largura completa */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px; 
 }
   
 .checkbox-group label {
-    width: 48%; /* Garante que cada checkbox ocupe metade da largura do grupo */
+    width: 25%;
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -223,7 +242,7 @@ input[type=text], select {
 }
 
 .experience-box p {
-    color: #1A7FBD;
+    color: var(--azul);
     margin-bottom: 10px;
 }
 
@@ -237,14 +256,14 @@ input[type=text], select {
 }
 
 .required-fields {
-    color: #1A7FBD;
+    color: var(--azul);
     margin-bottom: 20px;
     text-align: center;
 }
 
 .submit-button {
-    background-color: #1A7FBD;
-    color: #fff;
+    background-color: var(--azul);
+    color: var(--branco);
     padding: 10px;
     border: none;
     border-radius: 4px;
@@ -260,7 +279,7 @@ input[type=text], select {
 }
 
 .submit-button:hover {
-    background-color: #1A7FBD;
+    background-color: var(--azul);
 }
 
 .privacy-policy {
@@ -269,10 +288,18 @@ input[type=text], select {
     margin-top: 10px;
 }
 
-/* Estilo para seções e containers de "Projeto" e "Problema" */
-/* Seção de projeto */
+.blue-text {
+    color: var(--azul);
+}
+
+/* Estilo para a seção "O Projeto" */
+#projeto {
+    background-color: var(--azul);
+    color: var(--branco); 
+    padding: 40px; 
+    text-align: left;
+}
 .project-section {
-    background-color: var(--preto);
     padding: 40px;
     display: flex;
     justify-content: center;
@@ -283,39 +310,22 @@ input[type=text], select {
     display: flex;
     align-items: center;
     gap: 80px;
-    max-width: 1200px;
+    max-width: 1000px;
     width: 100%;
     flex-wrap: wrap;
 }
 
-.image-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.image-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-/* Estilo para a seção "O Projeto" */
-#projeto {
-    background-color: var(--azul);
-    color: var(--branco); 
-    padding: 40px; 
-    text-align: left;
-}
-
 .project-text {
     flex: 2;
-    color: var(--branco);
+    max-width: 55%;
+    text-align: left; 
+    color: var(--branco); 
+    margin-right: 20px;
 }
 
 /* Estilo para o título (h2) da seção "O Projeto" */
 .titulo-project {
-    color: #b8ddf5;
+    color: var(--azulc);
     margin-bottom: 20px;
     font-size: 2.5rem;
     text-align: left;
@@ -340,51 +350,57 @@ input[type=text], select {
 
 .image-container_proj {
     flex: 1;
-    max-width: 30%;
-    text-align: left; 
-    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .image-container_proj img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: auto;    
     border-radius: 8px;
 }
 
-/* Estilo específico para a seção Problema */
+/* Estilo para a seção "O Problema" */
 #problema {
-    background-color: var(--branco);
+    background-color: var(--brancopb);
     padding: 40px; 
     text-align: left;
 }
 
 .problem-section {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.problemas-box-div{
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 20px;
+    padding: 40px;
 }
 
 .problem-content {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px; /* Reduz o espaçamento entre imagem e texto */
-    padding: 20px; 
+    align-items: center;
+    gap: 80px;
+    max-width: 1000px;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 .image-container_prob {
     flex: 1;
-    max-width: 30%; /* Ajusta a largura da imagem */
-    text-align: left; 
-    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .image-container_prob img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    display: block;
     border-radius: 8px;
 }
 
@@ -430,7 +446,7 @@ input[type=text], select {
 /* Estilo para o titulo "Os Problemas" */
 .titulo-problem {
     font-size: 2.5rem;
-    background: linear-gradient(to right, #b8ddf5, var(--azul));
+    background: linear-gradient(to right, var(--azulc), var(--azul));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
@@ -439,7 +455,7 @@ input[type=text], select {
 
 /* Estilo para os parágrafos */
 .problem-text p {
-    font-family: 'Arial', sans-serif;
+    font-family: 'HK Grotesk','Arial', sans-serif;
     font-size: 16px; 
     line-height: 1.5; 
     margin-bottom: 15px;
@@ -481,7 +497,7 @@ input[type=text], select {
 
 .titulo-jornada {
     font-size: 2.5rem;
-    background: linear-gradient(to right, var(--azul), #b8ddf5);
+    background: linear-gradient(to right, var(--azul), var(--azulc));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 2rem;
@@ -496,13 +512,13 @@ input[type=text], select {
 }
 
 .journey-box {
-    background-color: rgb(15, 147, 199);
-    color: white;
+    background-color: var(--azul);
+    color: var(--branco);
     width: 320px;
     margin-bottom: 16px;
     padding: 2rem;
     border-radius: 10px; 
-    border: 2px solid var(--azul); 
+    border: 2px solid var(--azulpj); 
     display: flex;
     align-items: center;
     font-size: 12px;   
@@ -517,7 +533,7 @@ input[type=text], select {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white; 
+    background-color: var(--branco); 
 }
 
 .journey-box img {
@@ -527,8 +543,8 @@ input[type=text], select {
 }
 
 .botao-processo {
-    background-color: black;
-    color: white;
+    background-color: var(--preto);
+    color: var(--branco);
     padding: 0.75rem 2rem;
     border: none;
     border-radius: 5px;
@@ -553,7 +569,7 @@ input[type=text], select {
 }
 
 .seta-icone {
-    width: 1.5rem; /* Ajuste o tamanho da seta conforme necessário */
+    width: 1.5rem; 
     height: auto;
     display: inline-block;
     vertical-align: middle;
@@ -599,10 +615,11 @@ input[type=text], select {
     margin: 10px; 
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px var(--preto);
     transition: transform 0.2s ease-in-out;
 }
 
+/*Achei que seria legal :) */
 .objective-box:hover {
     transform: translateY(-5px);
 }
@@ -712,7 +729,7 @@ font-size: 10px;
 }
 
 .footer-column ul li a {
-    color: white;
+    color: var(--branco);
     text-decoration: none;
 }
 
